@@ -1,0 +1,436 @@
+/*
+Theme Name: BlankSlate
+Theme URI: https://github.com/tidythemes/blankslate
+Author: TidyThemes
+Author URI: http://tidythemes.com/
+Description: Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Version: 9001
+Requires at least: 5.0
+Tested up to: 5.7
+Requires PHP: 7.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2021 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+@import url("https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css");
+
+.wp-block-gallery figure { border: solid 2px white; }
+figure { margin: 3rem 0 !important; }
+figure figure { margin: 0 !important; }
+
+figure, meta, meta p, .modern-footnotes-list li, .modern-footnotes-list li a, cite, cite a, sup a, .button, .post-meta p, .post-meta li {
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+	color: #555;
+	font-size: 13px;
+	line-height: 135%;
+	font-style: normal;
+}
+.post-meta h2, .post-meta p { margin: .5rem 0; }
+.post-meta h2 { font-size: 16px; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; }
+figure, meta, meta p, cite, cite a, sup a {
+	text-align: center;
+}
+.no-markers { display: none; }
+
+.container h2 { font-size: 20px; }
+
+div.container { border-radius: 25px !important; border: solid 5px #f3f3f3; padding: 2rem; }
+div.container .wp-block-column *:first-child { margin-top: 0 !important; }
+div.container .wp-block-column *:last-child { margin-bottom: 0 !important; }
+.wp-block-file__embed { border: solid 5px black; }
+
+
+table { text-align: left; }
+td { border: solid 1px #eee; padding: 0 6px; line-height: 125%; }
+
+sup a {
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+    color: #fff;
+    font-size: 10px;
+    line-height: 135%;
+    background-color: #999;
+    border-radius: 100px;
+    padding-top: 4px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+sup a:hover {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+sup { line-height: 0; }
+
+figure a { color: #bbb; }
+
+.single article { max-width: 45rem;
+    padding: 2rem;
+    margin: 0 auto; }
+
+
+h1, h2, h3, h4, h5, h6, p, li, td {
+	/*https://kinsta.com/blog/web-safe-fonts/*/
+	/*font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;*/
+	font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 125%;
+}
+p, li, td {
+	line-height: 175%;
+}
+.student-contributions {
+	padding-top: 2.5rem;
+	border-top: dashed 2px #eee;
+	margin-top: 3rem;
+	font-size: 50px;
+	text-align: center;
+}
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+h2 {
+	font-size: 42px;
+}
+h3 {
+	font-size: 36px;
+}
+h4 {
+	font-size: 30px;
+}
+h5 {
+	font-size: 24px;
+}
+h6, p, li, td {
+	font-size: 20px;
+	font-weight: normal;
+	color: #222;
+}
+
+.text-center { text-align: center; }
+
+img { width: 100%; height: auto; }
+
+a { color: #049F76; /*text-decoration: none;*/ overflow-wrap: anywhere; }
+a:hover { color: #247ba0; text-decoration: underline; }
+
+
+
+
+/* video */
+/*.wp-block-embed iframe {
+    width: 680px;
+    height: 382.5px;
+}*/
+.wp-block-embed__wrapper {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+.wp-block-embed__wrapper iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+
+
+
+.wp-block-quote {
+	border-left: solid 10px #f3f3f3;
+    padding-left: 1.5rem;
+    margin-left: 1rem;
+    font-style: italic;
+    letter-spacing: .33px;
+}
+.wp-block-quote p {
+    color: #666;
+    font-size: 24px;
+}
+.wp-block-quote p::first-letter {
+	font-size: 200%;
+}
+
+.modern-footnotes-list, .post-meta { margin: 3rem auto; border-radius: 25px !important; background-color: #f3f3f3; padding: 1rem 2rem; }
+
+#wp-block-themeisle-blocks-advanced-columns-72e2b0ad { padding: 0 !important; }
+
+.button{background-color: #f3f3f3;padding:12px 24px;border-radius:50px;transition:background-color 0.25s ease-out,color 0.25s ease-out;cursor:pointer}
+
+
+
+
+
+hr.wp-block-separator { margin: 5rem 0;
+	border-top: 1px solid #999;
+    border-bottom: none; }
+
+    .vis-item.vis-background.negative {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+	.vis-item.vis-range {
+		border: none;
+		background-color: transparent;
+	}
+
+
+	/* https://coolors.co/palettes/trending */
+	.vis-range.geopolitics {
+	  border-top: solid 5px #049F76;
+	}
+	.vis-range.culture {
+	  border-top: solid 5px #ef476f;
+	}
+	.vis-range.science {
+	  border-top: solid 5px #118ab2;
+	}
+	.vis-range.social {
+	  border-top: solid 5px #B88100;
+	}
+	.vis-range.health {
+	  border-top: solid 5px #073B4C;
+	}
+
+	.vis-item.geopolitics {
+	  color: #049F76;
+	}
+	.vis-item.culture {
+	  color: #ef476f;
+	}
+	.vis-item.science {
+	  color: #118ab2;
+	}
+	.vis-item.social {
+	  color: #B88100;
+	}
+	.vis-item.health {
+	  color: #073B4C;
+	}
+
+		.vis-item a {
+			color:  inherit;
+	}
+
+	.vis-box.geopolitics, .vis-dot.geopolitics {
+	  border-color: #049F76 !important;
+	  color: #049F76;
+	}
+	.vis-box.culture, .vis-dot.culture {
+	  border-color: #ef476f !important;
+	  color: #ef476f;
+	}
+	.vis-box.science, .vis-dot.science {
+	  border-color: #118ab2 !important;
+	  color: #118ab2;
+	}
+	.vis-box.social, .vis-dot.social {
+	  border-color: #B88100 !important;
+	  color: #B88100;
+	}
+	.vis-box.health, .vis-dot.health {
+	  border-color: #073B4C !important;
+	  color: #073B4C;
+	}
+
+	.vis-dot { z-index: 8001; }
+
+.vis-box a { color: inherit; }
+/* https://coolors.co/049f76-ef476f-118ab2-b88100-073b4c */
+.vis-foreground .vis-group:nth-child(1) { background-color: rgba(106, 76, 148, 0.2); }/*
+.vis-foreground .vis-group:nth-child(2) { background-color: rgba(36, 121, 158, 0.2); }
+.vis-foreground .vis-group:nth-child(3) { background-color: rgba(242, 92, 90, 0.2); }
+.vis-foreground .vis-group:nth-child(4) { background-color: rgba(112, 194, 180, 0.2); }
+.vis-foreground .vis-group:nth-child(5) { background-color: rgba(168, 132, 106, 0.2); }*/
+.vis-foreground .vis-group:nth-child(1) { background-color: #049F7611; }
+.vis-foreground .vis-group:nth-child(2) { background-color: #ef476f11; }
+.vis-foreground .vis-group:nth-child(3) { background-color: #118ab211; }
+.vis-foreground .vis-group:nth-child(4) { background-color: #B8810011; }
+.vis-foreground .vis-group:nth-child(5) { background-color: #073B4C11; }
+
+.vis-labelset .vis-label {
+    color: white;
+}
+.vis-labelset .vis-label:nth-child(1) { background-color: #049F76; }
+.vis-labelset .vis-label:nth-child(2) { background-color: #ef476f; }
+.vis-labelset .vis-label:nth-child(3) { background-color: #118ab2; }
+.vis-labelset .vis-label:nth-child(4) { background-color: #B88100; }
+.vis-labelset .vis-label:nth-child(5) { background-color: #073B4C; }
+
+
+
+/*.vis-background { opacity: .75; }*/
+	.vis-item.vis-box {
+border: dashed 1px #333;
+	}
+		.vis-item.vis-box a {
+			text-decoration: none;
+			font-weight: bold;
+	}
+	.vis-item.vis-box:hover {
+		/*background-color: red !important;*/
+		/*box-shadow: 0 3px 5px 0 rgb(0 0 0 / 25%);*/
+		/*border-color: red !important;*/
+		/*opacity: 1;*/
+		border-style: solid;
+	}
+	.vis-item .vis-item-overflow {
+    /*text-align: center;*/
+}
+
+
+.vis-item .vis-item-overflow {overflow: visible;}
+
+.vis-range, .vis-box {
+    /*border-radius: 50px !important;*/
+    /*padding: 1px 8px;*/
+}	
+.vis-point, .vis-range, .vis-box {
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+	  font-size: 11px;
+}
+
+/*.am_class, .pm_class{ font-size: 16px;
+    	text-transform: uppercase;
+    	font-weight: bold; }*/
+
+
+/*main.am_class .pm_class, main.pm_class .am_class { opacity: .25; }*/
+
+
+	.vis-item {
+	  background-color: white;
+	}
+	.vis-label img { width: 24px;
+    margin: 5px auto; }
+	/*.vis-timeline { min-height: 50vh; }*/
+
+	.vis-labelset .vis-label .vis-inner {
+    padding: 20px 10px;
+    text-align: center;
+    display: block;
+    width: 100px;
+}
+
+.vis-point.am_class, .vis-point.pm_class { padding: 0px 5px 1px 15px; background-color: rgba(0,0,0,0.1); border-radius: 10px; }
+.vis-point.am_class a, .vis-point.pm_class a { text-decoration: none; }
+
+.vis-dot.am_class, .vis-dot.pm_class {
+	border-color: #fff !important;
+   }
+.vis-current-time { display: none; }
+
+
+/*.vis-dot.class {
+    background: transparent;
+    border: none;
+}
+.vis-dot.class::before {
+  content: url(/wp-content/themes/blankslate/icons/file-alt-solid.svg);
+  content: "★";
+  left: 4px;
+  position: relative;
+}*/
+
+
+
+
+/* SIDENAV FILTERS */
+
+
+.tags a[class*="week-"] { display: none; }
+.weeks a.disabled, .weeks a.disabled:hover { cursor: default; background-color: #eee; color: #999; }
+.weeks { line-height: 190%; }
+.weeks a { white-space:nowrap; }
+/*.weeks a:not([class*="week-"]) { display: none; }*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9001;
+  top: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.85);
+  overflow-x: hidden;
+  transition: 0.25s;
+  
+  /*box-sizing: border-box;*/
+  backdrop-filter: blur(7.5px);
+}
+.sidenav section {padding: 1rem;}
+
+
+.vis-item .vis-item-content {
+    padding: 2px 5px;
+}
+
+.sidenav div a, .weeks a, .sgc-link {
+	padding: 4px 10px 5px;
+	color: #000;
+	background-color: #ddd;
+	border-radius: 15px;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.sidenav div a:hover, .weeks a:hover {
+  color: #fff;
+  background-color: #ef476f;
+  text-decoration: none;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.travelersmap-container { display: none; }
+
+
+
+
+/*.vis-item img { width:7px !important; margin-right: 2px; }*/
+.vis-item sup { position: relative; top: 3px; font-size: 11px; }
+
+#visualization.student-generated-content-On .vis-item.student-generated-content .vis-item-content, 
+#visualization.student-generated-content-On .vis-item.spring-22-morning .vis-item-content, 
+#visualization.student-generated-content-On .vis-item.spring-22-afternoon .vis-item-content,
+.weeks a.yellow { background-color: yellow; }
+
+/*body[data-user="uwi_qdfnsn"] .spring-22-morning { background-image: url(/wp-content/themes/blankslate/images/am_class.jpg); }*/
+/*body[data-user="uwi_qdfnsn"] .spring-22-afternoon { background-image: url(/wp-content/themes/blankslate/images/pm_class.jpg); }*/
+
+/*body[data-user="meg"] .spring-22-morning { background-color: maroon; }*/
+/*body[data-user="meg"] .spring-22-afternoon { background-color: aqua; }*/
+
+body[data-user="spring_22_am"] .spring-22-afternoon, body[data-user="spring_22_pm"] .spring-22-morning { display: none; }
+
+/* admin columns */
+	th#date_start, th#date_end { width: 75px; }
+	
